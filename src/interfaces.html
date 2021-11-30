@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/whatwg-fetch@3.0.0/dist/fetch.umd.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>Game</title>
+</head>
+<body>
+    <div class="back"></div>
+    <canvas id="canvas" width="1134" height="974"></canvas>
+    
+    <div class="buttonsWindow" id="buttonsWindow" style="opacity:1;" >
+        <div class="buttons" id="buttons">
+            <button class="account bt">Account</button><br/><br/>
+            <button class="assets bt">Assets</button><br/><br/>
+            <button class="friends bt">Friends</button><br/><br/>
+            <button class="ranking bt">Ranking</button><br/><br/>
+            <button class="play bt">Play</button>
+        </div>
+        <button class="logout" onclick=logout()>Logout</button>
+        <img id="smallPic" src="img/profile.jpeg" />
+    </div>
+
+    <div class="rightWindows" > 
+        <div id="message" class="message page" >
+            <form name="login" onSubmit=demo()>
+                  <h3>Profile</h3>
+                  <br/><br/>
+                  <div id="profile">
+                  <br/>
+                  <img id="picture" src="img/profile.jpeg" />
+                  <br/><br/><br/>
+                 <p id="profile-username">IT5007-Project</p>
+                </div>
+                  <br/><br/><br/>
+                  <button class="but">Edit</button>
+                  <br/><br/><br/>              
+              </form>
+        </div>
+
+        <div class="playPage page" id="playPage" style="opacity:1;">
+            <!--<h3>Select the game mode:</h3>-->
+            </br></br>
+            <div class ='playMode0' style="text-shadow: rgba(0, 163, 200, 0.8) 0px 0px 0.1rem" onclick=playmode0()> &gt; &nbsp; Single Play</div>
+            <div class ='playMode1' style="text-shadow: rgba(0, 163, 200, 0.8) 0px 0px 0.1rem" onclick=playmode1()> &gt; &nbsp; Randomly Match</div>
+            <!--<button class="but">Match now</button>-->
+            <div class ='playMode2' style="text-shadow: rgba(0, 163, 200, 0.8) 0px 0px 0.1rem" onclick=playMode2()> &gt; &nbsp; Invite Friends</div> 
+            <!--<button class="playMode2Bt but" >Invite now</button>-->
+            <!--</br></br></br>
+            <button class='startPlay'> Start Now</button>-->
+        </div>
+        
+        <div class="rankingPage page" id="rankingPage" style="opacity:0;">
+            <table id="ranking_table" class = "tb">
+                <h3>Scores Ranking List</h3>
+                </br>
+                <tr>
+                    <th>Ranking</th>
+                    <th>Name</th>
+                    <th>Scores</th> 
+                </tr>
+                </table>
+        </div>
+
+        <div class="friendsPage page" id="friendsPage" style="opacity:0;">
+            <h3>Friends List</h3>
+            <br/>
+            <table class="tb">
+                <tr>
+                    <th>Serial No.</th>
+                    <th>Username</th>
+                </tr>
+                <td></td><td></td>
+                   
+            </table>
+            <br/><br/>
+            <button class="gift frbut">Select to gift</button><br/><br/>
+            <button class="invite frbut">Select to invite</button><br/><br/>
+            <button class="invite frbut">Add new friends</button>
+        </div>
+
+        <div class="assetsPage page" id="assetsPage" style="opacity:0;">
+            <h3>Assets</h3>
+            <br/>
+            <p>Your Money</p></hr>
+            <br/>
+            <table class="assetstable">
+                <tr>
+                    <td><img src="img/coin1.png" id="coin1" class="moneypic"></td>
+                    <td><img src="img/coin2.png" id="coin2" class="moneypic"></td>
+                </tr>
+                <tr>
+                    <td>1000</td>
+                    <td>50</td>
+                </tr>
+            </table>
+            <br/>
+            <p>Your Props</p>
+            <br/>
+            <table class="assetstable">
+                <tr>
+                    <td><img src="img/prop1.png" id="prop1" class="proppic"></td>
+                    <td><img src="img/prop2.png" id="prop2" class="proppic"></td>
+                    <td><img src="img/prop3.png" id="prop3" class="proppic"></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>5</td>
+                    <td>3</td>
+                </tr>
+            </table>
+            <br/>
+            <button class="shop but">Shop Now</button>
+        </div>
+
+    </div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
+
+</body>
+</html>
