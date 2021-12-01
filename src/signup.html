@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="80248058471-hj5hcmlqmttk9nvo0o32iu0tgcaqlgkl.apps.googleusercontent.com">
     <script src="https://unpkg.com/whatwg-fetch@3.0.0/dist/fetch.umd.js"></script>
     <link rel="stylesheet" type="text/css" href="index.css">
     <title>Game</title>
@@ -16,8 +18,8 @@
         <div id='homepage' class="homepage" style="opacity:1;">
             <p class='welcome' style="text-shadow: rgba(0, 163, 200, 0.8) 0px 0px 0.1rem">Sign up for Galactic Empire</p>
         </div>
-
         <div id="signup"></div>
+        <div class="g-signin2"  data-onsuccess="onSignIn" style="padding-left:190px;padding-top: 40px;"></div>
     </div>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
