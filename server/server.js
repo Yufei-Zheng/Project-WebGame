@@ -23,7 +23,7 @@ async function issueList() {
    return issues;
 }
 
-async function issueAdd(_, { issue }) { //issue需更新 且和按钮事件相关联
+async function issueAdd(_, { issue }) { 
    console.time('db insert');   
    const result = await db.collection('issues').insertOne(issue);
    console.timeEnd('db insert');

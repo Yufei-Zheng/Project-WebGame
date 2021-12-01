@@ -22,7 +22,7 @@ body{
 }
 
 
-/*初始化margin和padding以便于不同浏览器兼容*/
+/* Initial margin and padding to ensure compatibility in differnet browsers*/
 *{
 	margin:0;padding:0;box-sizing:border-box;
 }
@@ -102,7 +102,6 @@ body {
 	width:5rem;
 	max-width:640px;
 	border-radius:.2rem;
-	/*background-color: rgba(100,100,255,0.3);*/
 	left:50%;
 	top:20%;
 	margin-left:-2.5rem;
@@ -174,7 +173,6 @@ input{
 	position:fixed;
 	max-width:100px;
 	border-radius:.05rem;
-	/*background-color: rgba(100,100,255,0.3);*/
 	margin-left:-2.5rem;
 	text-align:center;
 	left:95%;
@@ -184,7 +182,6 @@ input{
     font-size:.14rem;
     color:rgba(222,222,255,0.9); 
     line-height:.3rem;
-    /*border:0.01rem solid rgba(50, 50, 255, 0.459);*/
     background-color: rgba(50, 50, 255, 0.459);
 }
 
@@ -194,8 +191,6 @@ input{
 	position:fixed;
 	width:5rem;
 	max-width:640px;
-	border-radius:.2rem;
-	/*background-color: rgba(100,100,255,0.3);*/
 	left:10%;
 	top:20%;
 	margin-left:-2.5rem;
@@ -207,7 +202,6 @@ input{
 	position:fixed;
 	max-width:100px;
 	border-radius:.15rem;
-	/*background-color: rgba(100,100,255,0.3);*/
 	margin-left:-2.5rem;
 	text-align:center;
 	left:105%;
@@ -227,7 +221,6 @@ input{
 	width:10rem;
 	max-width:640px;
 	border-radius:.2rem;
-	/*background-color: rgba(100,100,255,0.3);*/
 	left:40%;
 	top:20%;
 	margin-left:-2.5rem;
@@ -240,29 +233,12 @@ input{
 	width:10rem;
 	max-width:640px;
 	border-radius:.2rem;
-	/*background-color: rgba(100,100,255,0.3);*/
 	left:47%;
 	top:20%;
 	margin-left:-2.5rem;
 	text-align:center;
 }
 
-/*
-#profile{
-	left:50%;
-	top:40%;
-	margin-left:0rem;
-}*/
-
-/*
-#profile2{
-	float: right;
-	margin-top: 0;
-	position: absolute;
-	right: 2rem;
-	top:1.5rem;
-}
-*/
 
 #picture{
 	width:120px; 
@@ -308,9 +284,6 @@ input{
 	opacity:0;
 	width:7rem;
 	max-width:100%;
-	/*border-radius:.1rem;*/
-	/*background-color: rgba(50,50,255,0.08);
-	border:0.01rem solid rgba(150,150,255,0.8);*/
 }
 
 .page h3{
@@ -330,13 +303,6 @@ input{
 	padding-top: 7px;
 	padding-bottom: 7px;
 }
-/*
-#message{
-	opacity:0;
-	width:5rem;
-	max-width:100%;
-	border-radius:.2rem;
-	/*background-color: rgba(100,100,255,0.3);*/
 
 #message .word{
 	font-size:.4rem;

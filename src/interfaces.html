@@ -12,6 +12,7 @@
     <div class="back"></div>
     <canvas id="canvas" width="1134" height="974"></canvas>
     
+    <!--Defined elements always stay on interfaces-->
     <div class="buttonsWindow" id="buttonsWindow" style="opacity:1;" >
         <div class="buttons" id="buttons">
             <button class="account bt">Account</button><br/><br/>
@@ -24,7 +25,9 @@
         <img id="smallPic" src="img/profile.jpeg" />
     </div>
 
+    <!--Defined interfaces showed in the middle-->>
     <div class="rightWindows" > 
+        <!--Account page-->
         <div id="message" class="message page" >
             <form name="login" onSubmit=demo()>
                   <h3>Profile</h3>
@@ -41,18 +44,17 @@
               </form>
         </div>
 
+        <!--Play page-->
         <div class="playPage page" id="playPage" style="opacity:1;">
-            <!--<h3>Select the game mode:</h3>-->
             </br></br>
             <div class ='playMode0' style="text-shadow: rgba(0, 163, 200, 0.8) 0px 0px 0.1rem" onclick=playmode0()> &gt; &gt; &nbsp;  Single Play</div>
             <div class ='playMode1' style="text-shadow: rgba(0, 163, 200, 0.8) 0px 0px 0.1rem" onclick=playmode1()> Random Match</div>
-            <!--<button class="but">Match now</button>-->
             <div class ='playMode2' style="text-shadow: rgba(0, 163, 200, 0.8) 0px 0px 0.1rem" onclick=playMode2()> Invite Friends</div> 
-            <!--<button class="playMode2Bt but" >Invite now</button>-->
 
             <button class='startPlay' onclick=startPlay()> Start Now </button>
         </div>
         
+        <!--Ranking page-->
         <div class="rankingPage page" id="rankingPage" style="opacity:0;">
             <table id="ranking_table" class = "tb">
                 <h3>Scores Ranking List</h3>
@@ -65,6 +67,7 @@
                 </table>
         </div>
 
+        <!--Friends page-->
         <div class="friendsPage page" id="friendsPage" style="opacity:0;">
             <h3>Friends List</h3>
             <br/>
@@ -82,6 +85,7 @@
             <button class="invite frbut">Add new friends</button>
         </div>
 
+        <!--Assets page-->
         <div class="assetsPage page" id="assetsPage" style="opacity:0;">
             <h3>Assets</h3>
             <br/>

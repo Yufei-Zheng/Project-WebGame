@@ -4,6 +4,7 @@ import "../index.css"
 
 const dateRegex = new RegExp('^\\d\\d\\d\\d-\\d\\d-\\d\\d');
 
+// New information from user input
 class IssueAdd extends React.Component {
 	constructor() {
 		super();
@@ -35,13 +36,13 @@ class IssueAdd extends React.Component {
 		);
 	}
 }
-//style="text-align: center;"
 
 function jsonDateReviver(key, value) {
 	if (dateRegex.test(value)) return new Date(value);
 	return value;
 }
 
+// Graphql to fetch and send data
 async function graphQLFetch(query, variables = {}) {
     try {
       const response = await fetch('http://localhost:3000/graphql', {
@@ -67,7 +68,7 @@ async function graphQLFetch(query, variables = {}) {
     }
 }
 
-
+// Main component to be exported to render in signup.html
 class SignUp extends React.Component {
 	constructor() {
 		super();
@@ -91,7 +92,7 @@ class SignUp extends React.Component {
 		}
 	}
  
-	async createIssue(issue) {//增加判断如果name存在
+	async createIssue(issue) {
 		const query = `mutation {
 			issueAdd(issue:{
 				id: "${issue.id}"
@@ -114,6 +115,7 @@ class SignUp extends React.Component {
 	}
 }
 
+// Performance Evaluation
 const callback = (
 	id, // the "id" prop of the Profiler tree that has just committed
 	phase, // either "mount" (if the tree just mounted) or "update" (if it re-rendered)
