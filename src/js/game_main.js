@@ -122,9 +122,9 @@ function deleComponent() {
 // bind mouse move event with canvas
 canvas.addEventListener("mousemove",(e) => {
     console.log(e.offsetX,e.offsetY);
-    let x = e.offsetX;
-    let y = e.offsetY;
-
+    let x = Math.floor(e.offsetX/4.4);
+    let y = Math.floor(e.offsetY/4.4);
+    
     if (x>SPACE.width - hero.width/2){
         x = SPACE.width- hero.width/2;
     } else if(x< hero.width/2){
