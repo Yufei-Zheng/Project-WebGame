@@ -9,7 +9,7 @@ npm run build
 npm run dev
 ```
 
-\* Note: You may avoid using npm install, since all the pakages needed are already offered in the directory ./node_modules.
+\* Note: You may avoid using npm install, since all the pakages needed are offered in the directory ./node_modules.
 
 ### UI Navigation
 
@@ -26,7 +26,7 @@ npm run dev
 
 4. Click 'Play' in the left bar and you will see:
 
-   ![img](https://lh4.googleusercontent.com/fvPdjWLHwrqXW6_BaXQus9ulkz_rl5Y_nJ1K6HlQg5WuUQO8jy-K5J5EDGFF7gw5gjn9hrPkDu7an3pi0SpGtpVpRVCxmF6frgRbr7pBIDB4u2ifkFARgDnzxrHz88i0JfNc-iby)
+![interfaces](https://user-images.githubusercontent.com/50799916/144274707-9c2afa75-3705-4eb2-be72-3fd878dff065.PNG)
 
    By now, only single play mode has been implemented.
 
