@@ -47,4 +47,4 @@ npm run dev
 
 5. Click anywhere to pause the running game.
 
-\* Vedio is attached to show the UI navigation and game operation.
+**\* Vedio is attached to show the UI navigation and game operation.**
