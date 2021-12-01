@@ -252,7 +252,7 @@ window.signup = function signup(){
 	window.location.assign('signup.html');
 }
 
-window.startPlay = function starPlay(){
+window.startPlay = function startPlay(){
 	window.location.assign('game.html');
 }
 
