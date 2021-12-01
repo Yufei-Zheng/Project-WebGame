@@ -200,14 +200,8 @@ class Space {
     }
     }
     paint(context) {
-        //if(this.bg === undefined) {return}
-        //console.log(typeof(this.bg));
         context.drawImage(this.bg,this.x1,this.y1,this.width,this.height);
         context.drawImage(this.bg,this.x2,this.y2,this.width,this.height);
-        /*this.bg.onload = function(){
-            context.drawImage(this.bg,this.x1,this.y1,this.width,this.height);
-            context.drawImage(this.bg,this.x2,this.y2,this.width,this.height);
-        }*/
         }
 }
 
@@ -249,12 +243,7 @@ class Hero {
 
     }
     paint(){
-        //if(this.img === undefined) {return}
-        //console.log(typeof(this.img));
         context.drawImage(this.img,this.x,this.y);
-        /*this.img.onload = function(){
-            context.drawImage(this.img,this.x,this.y);
-        }*/
     }
 
     shoot() {
@@ -300,12 +289,7 @@ class Loading {
 
     }
     paint(context){
-        //if(this.frame[this.frameIndex] === undefined) {return}
-        //console.log(typeof(this.frame[this.frameIndex]));
         context.drawImage(this.frame[this.frameIndex],this.x,this.y)
-        /*this.frame[this.frameIndex].onload = function(){
-            context.drawImage(this.frame[this.frameIndex],this.x,this.y)
-        }*/
     }
 }
 
@@ -326,12 +310,7 @@ class Bullet {
 
     }
     paint(context) {
-        //if(this.frame[this.frameIndex] === undefined) {return}
-        //console.log(typeof(this.img))
         context.drawImage(this.img,this.x,this.y)
-        /*this.img.onload = function(){
-            context.drawImage(this.img,this.x,this.y)
-        }*/
     }
 
     outOfBounds() {
@@ -382,12 +361,7 @@ class Enemy{
     }
 
     paint(context){
-        //if(this.frame[this.frameIndex] === undefined) {return}
-        //console.log(typeof(this.img))
         context.drawImage(this.img,this.x,this.y);
-        /*this.img.onload = function(){
-            context.drawImage(this.img,this.x,this.y);
-        }*/
     }
 
     outOfBounds(){
@@ -425,8 +399,8 @@ class Enemy{
     }
 }
 
-// game_main.js
 
+// game_main.js
 const START = 0;
 const STARTING = 1;
 const RUNNING = 2;
@@ -608,6 +582,8 @@ bg.addEventListener("load",() => {
                 break
             case RUNNING:
                 console.log("Running");
+                // UserTiming
+                //window.performance.mark("startRunning"); 
                 space.judge();
                 space.paint(context);
 
@@ -621,8 +597,9 @@ bg.addEventListener("load",() => {
                 deleComponent();
                 paintComponent();
 
-
                 checkHit();
+                //window.performance.mark("endRunning");
+                //console.log(window.performance.measure('measure_running', 'startRunning', 'endRunning'))
                 break
             case PAUSE:
                 console.log("Pause")
@@ -645,4 +622,11 @@ bg.addEventListener("load",() => {
     },10);
 });
 
-
+// Page load time
+window.onload = function(){
+    setTimeout(function(){
+        let time = window.performance.timing
+        let pageloadtime = time.loadEventStart - time.navigationStart;
+        console.log('pageloadtime', pageloadtime)
+    }, 0);
+};

@@ -20,8 +20,6 @@ canvas2.height = 100;
 var half = canvas2.width / 2,
 gradient2 = ctx2.createRadialGradient(half, half, 0, half, half, half);//中心渐变
 gradient2.addColorStop(0.025, '#fff');
-/*gradient2.addColorStop(0.1, 'hsl(' + hue + ', 61%, 33%)');
-gradient2.addColorStop(0.25, 'hsl(' + hue + ', 64%, 6%)');*/
 gradient2.addColorStop(0.1,'rgba(33, 73, 136,0.9)');
 gradient2.addColorStop(0.25,'rgba(33, 73, 136,0.05)');
 gradient2.addColorStop(1, 'transparent');
@@ -88,10 +86,6 @@ for (var i = 0; i < maxStars; i++) {
 }
 
 function animation() {
-  //ctx.globalCompositeOperation = 'source-over';
-  //ctx.globalAlpha = 1;
-  //ctx.fillStyle = 'hsla(' + 217 + ', 64%, 6%, 1)';
-  //ctx.fillRect(0, 0, w, h);
   ctx.clearRect(0,0,w,h);
 
   ctx.globalCompositeOperation = 'lighter';
@@ -102,8 +96,6 @@ function animation() {
   window.requestAnimationFrame(animation);
 }
 
-
-/*function drawChat(WhichCanvas,chat){}*/
 
 animation();
 //input color[ r: g: b]
@@ -260,18 +252,18 @@ window.signup = function signup(){
 	window.location.assign('signup.html');
 }
 
+window.startPlay = function starPlay(){
+	window.location.assign('game.html');
+}
+
 //Performance Evaluation
-
-performance.getEntriesByType('navigation').forEach((navigation) => {
-	console.dir(navigation);
-});
-  
-performance.getEntriesByType('resource').forEach((resource) => {
-	console.dir(resource);
-});
-
-let time = window.performance.timing
-let pageloadtime = time.loadEventStart - time.navigationStart;
-console.log('pageloadtime', pageloadtime)
+// Page load time
+window.onload = function(){
+    setTimeout(function(){
+        let time = window.performance.timing
+        let pageloadtime = time.loadEventStart - time.navigationStart;
+		console.log('pageloadtime', pageloadtime)
+    }, 0);
+};
 
   
