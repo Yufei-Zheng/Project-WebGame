@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="80248058471-hj5hcmlqmttk9nvo0o32iu0tgcaqlgkl.apps.googleusercontent.com">
     <script src="https://unpkg.com/whatwg-fetch@3.0.0/dist/fetch.umd.js"></script>
     <link rel="stylesheet" type="text/css" href="index.css">
     <title>Game</title>
@@ -22,7 +24,10 @@
             <form>  
             <input id="username" type="text"  placeholder="User Name" name="u"></input>  
             <input id="password" type="password"  placeholder="Password" name="p"></input>  
-            <div style="text-align: center;"><button class="login" type="submit" >Login</button> </div>
+            <div style="text-align: center;">
+                <button class="login" type="submit" >Login</button> 
+                <div class="g-signin2"  data-onsuccess="onSignIn" style="padding-left:90px;padding-top: 25px;"></div>
+            </div>
             </form> 
         </div>
     </div>
