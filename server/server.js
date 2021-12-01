@@ -24,22 +24,21 @@ async function issueList() {
 }
 
 async function issueAdd(_, { issue }) { //issue需更新 且和按钮事件相关联
-   console.log("wait add", issue)
-   console.time('insert');   
+   console.time('db insert');   
    const result = await db.collection('issues').insertOne(issue);
-   console.timeEnd('insert');
-   console.time('query');   
+   console.timeEnd('db insert');
+   console.time('db query');   
    const savedIssue = await db.collection('issues').findOne({ _id: result.insertedId });
-   console.timeEnd('query');   
+   console.timeEnd('db query');   
    return savedIssue;
 }
 
 async function connectToDb() {
-   console.time('connect')
+   console.time('db connect')
    const client = new MongoClient(url, { useNewUrlParser: true });
    await client.connect();
    console.log('Connected to MongoDB at', url);
-   console.timeEnd('connect')
+   console.timeEnd('db connect')
    db = client.db();
 }
 
