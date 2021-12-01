@@ -4,6 +4,7 @@
 
 ```
 git clone git@github.com:Yufei-Zheng/IT5007project-Game-TPLink.git
+screen mongod #ctrl+a+d to exit
 mongo userbase scripts/init.mongo.js
 npm run build
 npm run dev
