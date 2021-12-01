@@ -45,7 +45,7 @@ npm run dev
 
 2. The spacecraft's position is <u>controlled by your mouse moving</u>. Missiles are automatically fired. 
 
-3. 'Enemies',including planets and other spacecrafts, will appear randomly and move automatically at different speed . Collision with them will impair your life. Your scores will increase when you destroy your enemies.
+3. 'Enemies',including planets and other spacecrafts, will appear randomly and move automatically at different speeds . Collision with them will impair your life. Your scores will increase when you destroy your enemies.
 
 4. Game over if you run out of three lives.
 
