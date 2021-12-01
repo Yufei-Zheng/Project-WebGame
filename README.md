@@ -45,4 +45,6 @@ npm run dev
 
 4. Game over if you run out of three lives.
 
-5. Click anywhere to pause your game.
+5. Click anywhere to pause the running game.
+
+\* Vedio is attached to show the UI navigation and game operation.
